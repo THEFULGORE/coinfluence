@@ -5,19 +5,18 @@ import { useGetCryptosQuery } from "../../../services/cryptoApi";
 import "./Ticker.scss";
 
 const Ticker: FC = () => {
-  const { data: cryptosList, isFetching } = useGetCryptosQuery("");
+  const { data: cryptosList, isFetching } = useGetCryptosQuery(50);
   const [cryptos, setCryptos] = useState(cryptosList?.data.coins);
 
   useEffect(() => {
     setCryptos(cryptosList?.data.coins);
   }, [cryptosList]);
-  console.log(cryptos);
   return (
     <div className="ticker">
       {cryptos?.map((currency: ICoin) => (
-        <div key={currency.uuid} className='ticker__el'>
-          <Link to={`/crypto/${currency.uuid}`}>
-            <h2 style={{ color: currency.change < 0 ? "red" : "green" }}>
+        <div key={currency.uuid} className="ticker__el">
+          <Link to={`/cryptocurrencies/${currency.name}`}>
+            <h2 style={{ color: currency.change < 0 ? "#ea3943" : "#16c784" }}>
               {currency.symbol} {currency.change}%
             </h2>
           </Link>

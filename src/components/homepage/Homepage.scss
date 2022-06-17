@@ -1,0 +1,115 @@
+.homepage {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    align-items: start;
+    &__currencies {
+        background-color: orange;
+        margin: 1rem .5rem;
+        padding: 0;
+        border-radius: 8px;
+    }
+}
+
+.news {
+    background: linear-gradient(180deg, rgba(34,37,48,1) 0%, rgb(17, 17, 19) 50%);
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    &__provider {
+        display: flex;
+        align-items: center;
+    }
+    &__provider-image {
+        max-width: 2rem;
+        margin-right: 0.5rem;
+    }
+    &__provider-name {
+        font-size: 0.75rem;
+        color: rgba(161, 167, 187, 0.753)
+    }
+    &__content {
+        margin-left: 1rem;
+    }
+    &__image {
+        margin: auto;
+    }
+    &__image-container {
+        display: grid;
+        grid-template-columns: 7fr 2fr;
+        align-items: center;
+    }
+    &__description {
+        color: rgb(161, 167, 187)
+    }
+}
+
+.currencies {
+    &__title {
+
+        text-shadow: 1px 1px 2px black;
+        margin-left: .75rem;
+    }
+}
+
+.coin {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border-bottom: 1px solid #222531;
+    &__name {
+        display: flex;
+    }
+    &__title {
+        margin-right: 1rem;
+    }
+    &__symbol {
+        color: rgb(161, 167, 187)
+    }
+    &__stats {
+        display: flex;
+    }
+    &__price {
+        margin-right: 1rem;
+    }
+    &__image {
+        width: 30px;
+        margin: 0 0.5rem;
+    }
+    &__change {
+        margin-right: .5rem;
+    }
+    &__change-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.even {
+    background-color: #17171a;
+}
+
+.odd {
+    background-color: rgba(34,37,48,1);
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #16c784;
+  margin-right: .5rem;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ea3943;
+  margin-right: .5rem;
+}

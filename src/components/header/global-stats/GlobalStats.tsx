@@ -4,7 +4,7 @@ import './GlobalStats.scss'
 import { useGetCryptosQuery } from '../../../services/cryptoApi';
 
 const GlobalStats: FC = () => {
-  const { data, isFetching} = useGetCryptosQuery('');
+  const { data, isFetching} = useGetCryptosQuery(1);
   const globalStats = data?.data.stats
   if(isFetching) return (<div>'...Loading'</div>);
 
