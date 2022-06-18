@@ -62,7 +62,7 @@ const Homepage: FC = () => {
           </div>
           <div className="currencies__list">
             {cryptosList?.data.coins.map((coin, i) => (
-              <Link key={i} to={`/crypto/${coin.name}`}>
+              <Link key={i} to={`/crypto/${coin.uuid}`}>
                 <div className={"coin" + (i % 2 == 0 ? " odd" : " even")}>
                   <div className="coin__name">
                     <img src={coin.iconUrl} alt="" className="coin__image" />

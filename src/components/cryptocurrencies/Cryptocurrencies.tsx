@@ -91,7 +91,7 @@ const Cryptocurrencies: FC = () => {
       </div>
       <div className="crypto">
         {cryptos?.map((coin, i) => (
-          <Link key={i} to={`/cryptocurrencies/${coin.name}`}>
+          <Link key={i} to={`/cryptocurrencies/${coin.uuid}`}>
             <div
               className="cryptocoin"
               style={{
