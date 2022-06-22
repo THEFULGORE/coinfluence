@@ -5,7 +5,7 @@
     gap: 1rem;
     padding: 1rem;
     &__container {
-        background: linear-gradient(180deg, rgba(34,37,48,1) 0%, rgb(17, 17, 19) 50%);
+        background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-end) 50%);
         border-radius: 8px;
         padding: .5rem;
         height: fit-content;
@@ -29,7 +29,7 @@
     }
     &__provider-name {
         font-size: 0.75rem;
-        color: rgba(161, 167, 187, 0.753)
+        color: var(--descr-color)
     }
     &__search {
         padding-left: 1rem;

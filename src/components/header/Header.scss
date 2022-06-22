@@ -1,8 +1,42 @@
-.header__info {
+.header {
+  &__container {
+    background-color: var(--header-color);
+  }
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 0 1rem;
+  }
+
+  &__logo {
+    color: var(--second-color);
+  }
+  &__nav {
     display: flex;
+    align-items: center;
     justify-content: space-around;
+    & h1 {
+      font-size: 1.75rem;
+      font-weight: 300;
+      transition: .3s;
+      &:hover {
+        color: var(--second-color);
+      }
+    }
+  }
+  &__theme {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
 }
 
-.header__logo {
-    color: orange;
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--first-color);
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    color: var(--second-color);
+  }
 }

@@ -3,7 +3,7 @@
     grid-template-columns: 4fr 2fr;
     align-items: start;
     &__currencies {
-        background-color: orange;
+        background-color: var(--second-color);
         margin: 1rem .5rem;
         padding: 0;
         border-radius: 8px;
@@ -11,7 +11,7 @@
 }
 
 .news {
-    background: linear-gradient(180deg, rgba(34,37,48,1) 0%, rgb(17, 17, 19) 50%);
+    background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-end) 50%);
     border-radius: 8px;
     margin: 1rem;
     padding: 0.5rem 0;
@@ -27,7 +27,7 @@
     }
     &__provider-name {
         font-size: 0.75rem;
-        color: rgba(161, 167, 187, 0.753)
+        color: var(--background-color-lighten)
     }
     &__content {
         margin-left: 1rem;
@@ -41,14 +41,14 @@
         align-items: center;
     }
     &__description {
-        color: rgb(161, 167, 187)
+        color: var(--descr-color)
     }
 }
 
 .currencies {
     &__title {
 
-        text-shadow: 1px 1px 2px black;
+        text-shadow: 1px 1px 2px var(--third-color);
         margin-left: .75rem;
     }
 }
@@ -58,8 +58,8 @@
     padding: 0;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    border-bottom: 1px solid #222531;
+    background-color: var(--third-color);
+    border-bottom: 1px solid var(--border-color);
     &__name {
         display: flex;
     }
@@ -67,7 +67,7 @@
         margin-right: 1rem;
     }
     &__symbol {
-        color: rgb(161, 167, 187)
+        color: var(--background-color-light)
     }
     &__stats {
         display: flex;
@@ -89,11 +89,11 @@
 }
 
 .even {
-    background-color: #17171a;
+    background-color: var(--background-color);
 }
 
 .odd {
-    background-color: rgba(34,37,48,1);
+    background-color: var(--background-color-alt);
 }
 
 .arrow-up {

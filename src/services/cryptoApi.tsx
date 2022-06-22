@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IStats } from "../models/IStats";
+import { ICoinHistory, ISingleCoin, IStats } from "../models/IStats";
 
 const cryptoApiHeaders = {
   "x-rapidapi-key": "8a2b28b6c3msh2366e70c26b029cp1b819djsn25951fde9587",
@@ -17,10 +17,12 @@ export const cryptoApi = createApi({
     getCryptos: builder.query<IStats, any>({
       query: (count) => createRequest(`/coins?limit=${count}`),
     }),
-    getCryptoDetails: builder.query<IStats, any>({
+    getCryptoDetails: builder.query<ISingleCoin, any>({
       query: (coinId) => createRequest(`/coin/${coinId}`),
     }),
+    getCryptoHistory: builder.query<ICoinHistory, any>({
+      query: ({ coinUID, timePeriod }) => createRequest(`/coin/${coinUID}/history?timePeriod=${timePeriod}`), }),
   }),
 });
 
-export const { useGetCryptosQuery, useGetCryptoDetailsQuery } = cryptoApi;
+export const { useGetCryptosQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } = cryptoApi;

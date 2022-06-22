@@ -1,21 +1,57 @@
+:root {
+  --background-color: #17171a;
+  --background-color-alt: #222530;
+  --background-color-light: #a1a7bb;
+  --background-color-lighten: #a1a7bbc0;
+  --header-color: #17171a;
+  --first-color: #fff;
+  --second-color: #ffd700;
+  --third-color: #000;
+  --border-color: #222531;
+  --gradient-start: #222530;
+  --gradient-end: #111113;
+  --descr-color: #a1a7bb;
+  --search-border-color: #fff;
+  --scroll-color: #3b4052;
+}
+
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Poppins", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #17171a;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--first-color);
   overflow-x: hidden;
 }
 
+.light-theme {
+  --background-color: #f8fafd;
+  --background-color-alt: #fff;
+  --background-color-light: #a1a7bb;
+  --background-color-lighten: #a1a7bbc0;
+  --header-color: #fff;
+  --first-color: #000;
+  --second-color: #ffd700;
+  --third-color: #fff;
+  --border-color: #eff2f5;
+  --gradient-start: #fff;
+  --gradient-end: #d8d8d8;
+  --descr-color: #181818;
+  --search-border-color: #181818;
+  --scroll-color: #979dad;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
@@ -33,5 +69,18 @@ h1 {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--first-color);
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-color);
+  border-radius: 6px;
 }

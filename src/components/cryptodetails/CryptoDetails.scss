@@ -1,0 +1,134 @@
+.crypto-details {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+.coin-info {
+  display: flex;
+  align-items: center;
+  &__container {
+    padding: 1rem;
+  }
+  &__name {
+    font-size: 3rem;
+  }
+  &__symbol {
+    margin-left: 0.5rem;
+  }
+}
+
+.coin-details {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3fr 2fr;
+  &__price {
+    font-size: 5rem;
+  }
+  &__change-container {
+    display: flex;
+    align-items: center;
+  }
+  &__side-stats {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  justify-content: space-between;
+  &__price {
+    display: flex;
+  }
+  &__price-descr {
+    margin-right: 1rem;
+  }
+  &__button {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: var(--first-color);
+    font-family: "Poppins";
+    font-size: 1.25rem;
+    &:hover {
+      background-color: var(--background-color-light);
+    }
+  }
+}
+
+.selected {
+  color: var(--second-color);
+}
+
+.coin-desc-link {
+  margin-top: 1rem;
+}
+
+.coin-desc-link h3 {
+  color: var(--second-color);
+}
+
+.side-links {
+  margin-top: 3rem;
+  a {
+    color: rgb(71, 71, 255);
+  }
+  a:hover {
+    color: var(--second-color);
+  }
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+  }
+}
+
+.side-info {
+  margin-top: 1rem;
+  &__container {
+    border-bottom: 1px solid var(--first-color);
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  &__description {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  &__provider {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  &__provider-image {
+    max-width: 2rem;
+    margin-right: 0.5rem;
+  }
+  &__provider-name {
+    font-size: 0.75rem;
+    color: var(--background-color-lighten);
+  }
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #16c784;
+  margin-right: 0.5rem;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ea3943;
+  margin-right: 0.5rem;
+}
