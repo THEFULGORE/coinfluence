@@ -15,7 +15,7 @@ const Ticker: FC = () => {
     <div className="ticker">
       {cryptos?.map((currency: ICoin) => (
         <div key={currency.uuid} className="ticker__el">
-          <Link to={`/cryptocurrencies/${currency.name}`}>
+          <Link to={`/cryptocurrencies/${currency.uuid}`}>
             <h2 style={{ color: currency.change < 0 ? "#ea3943" : "#16c784" }}>
               {currency.symbol} {currency.change}%
             </h2>
