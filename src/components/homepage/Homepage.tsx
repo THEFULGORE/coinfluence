@@ -4,14 +4,19 @@ import millify from "millify";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
 import { useGetNewsQuery } from "../../services/newsApi";
 import "./Homepage.scss";
+import { Spinner } from "../Spinner/Spinner";
 
 const Homepage: FC = () => {
-  const { data: newsList } = useGetNewsQuery({
+  const { data: newsList, isFetching: isNewsFetching } = useGetNewsQuery({
     newsCategory: "Cryptocurrency",
     count: 10,
   });
   const { data: cryptosList, isFetching: isCryptoFetching } =
     useGetCryptosQuery(10);
+
+  if (isCryptoFetching || isNewsFetching) {
+    return <><Spinner /></>;
+  }
 
   return (
     <div className="homepage">

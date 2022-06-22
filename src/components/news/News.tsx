@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 import { useGetNewsQuery } from '../../services/newsApi';
+import { Spinner } from '../Spinner/Spinner';
 import './News.scss'
 
 const News = () => {
   const [newsCategory, setNewsCategory] = useState("Cryptocurrency");
   const { data } = useGetCryptosQuery(100);
-  const { data: newsList } = useGetNewsQuery({
+  const { data: newsList, isFetching } = useGetNewsQuery({
     newsCategory: newsCategory,
     count: 30,
   });
@@ -15,6 +16,13 @@ const News = () => {
     data?.data?.coins.forEach(coin => {
       if(coin.name.toLowerCase() === text.toLowerCase()) { setNewsCategory(text)}
     })
+  }
+
+  if (isFetching) {
+    return (
+      <>
+        <Spinner />
+      </>);
   }
 
   return (

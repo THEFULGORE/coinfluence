@@ -1,6 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Header, Cryptocurrencies, News, Homepage, CryptoDetails } from "./components";
+import {
+  Header,
+  Cryptocurrencies,
+  News,
+  Homepage,
+  CryptoDetails,
+  Footer,
+} from "./components";
 import Ticker from "./components/header/ticker/Ticker";
 
 function App() {
@@ -14,11 +21,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
-          <Route path="/cryptocurrencies/:coinUID" element={<CryptoDetails />} />
+          <Route
+            path="/cryptocurrencies/:coinUID"
+            element={<CryptoDetails />}
+          />
           <Route path="/news" element={<News />} />
         </Routes>
       </div>
-      <div className="footer"></div>
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }

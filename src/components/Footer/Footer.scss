@@ -1,0 +1,23 @@
+.footer {
+  height: 7rem;
+  background-color: var(--background-color-alt);
+  color: var(--descr-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &__container {
+  }
+  &__title {
+    text-align: center;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    & a {
+        color: rgb(70, 70, 255);
+        &:hover {
+            color: var(--second-color);
+        }
+    }
+  }
+}

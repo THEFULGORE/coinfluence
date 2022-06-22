@@ -3,6 +3,7 @@ import React, { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ICoin } from "../../models/IStats";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
+import { Spinner } from "../Spinner/Spinner";
 import "./Cryptocurrencies.scss";
 
 const Cryptocurrencies: FC = () => {
@@ -19,7 +20,7 @@ const Cryptocurrencies: FC = () => {
   }, [cryptosList, searchTerm]);
 
   if (isFetching) {
-    return <div>Loading...</div>;
+    return (<><Spinner/></>);
   }
 
   const sortCryptos = (key: string) => {

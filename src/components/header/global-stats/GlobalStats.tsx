@@ -2,11 +2,12 @@ import React, { FC } from 'react'
 import millify from 'millify';
 import './GlobalStats.scss'
 import { useGetCryptosQuery } from '../../../services/cryptoApi';
+import { Spinner } from '../../Spinner/Spinner';
 
 const GlobalStats: FC = () => {
   const { data, isFetching} = useGetCryptosQuery(1);
   const globalStats = data?.data.stats
-  if(isFetching) return (<div>'...Loading'</div>);
+  if(isFetching) return (<Spinner/>);
 
   return (
     <div className="GlobalStats">
