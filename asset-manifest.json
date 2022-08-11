@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/coinfluence/static/css/main.a0c40638.css",
-    "main.js": "/coinfluence/static/js/main.3cb69fd0.js",
+    "main.js": "/coinfluence/static/js/main.971d5f20.js",
     "index.html": "/coinfluence/index.html",
     "main.a0c40638.css.map": "/coinfluence/static/css/main.a0c40638.css.map",
-    "main.3cb69fd0.js.map": "/coinfluence/static/js/main.3cb69fd0.js.map"
+    "main.971d5f20.js.map": "/coinfluence/static/js/main.971d5f20.js.map"
   },
   "entrypoints": [
     "static/css/main.a0c40638.css",
-    "static/js/main.3cb69fd0.js"
+    "static/js/main.971d5f20.js"
   ]
 }
