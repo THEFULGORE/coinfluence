@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/coinfluence/static/css/main.a0c40638.css",
-    "main.js": "/coinfluence/static/js/main.971d5f20.js",
+    "main.css": "/coinfluence/static/css/main.96bbb343.css",
+    "main.js": "/coinfluence/static/js/main.ca82141b.js",
     "index.html": "/coinfluence/index.html",
-    "main.a0c40638.css.map": "/coinfluence/static/css/main.a0c40638.css.map",
-    "main.971d5f20.js.map": "/coinfluence/static/js/main.971d5f20.js.map"
+    "main.96bbb343.css.map": "/coinfluence/static/css/main.96bbb343.css.map",
+    "main.ca82141b.js.map": "/coinfluence/static/js/main.ca82141b.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0c40638.css",
-    "static/js/main.971d5f20.js"
+    "static/css/main.96bbb343.css",
+    "static/js/main.ca82141b.js"
   ]
 }
